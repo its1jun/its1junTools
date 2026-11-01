@@ -3,6 +3,9 @@ from dataclasses import dataclass, field
 from typing import Callable, Optional
 
 
+CATEGORY_ETC = "Etc"   # 분류 없음. 홈의 카테고리 목록에서 항상 맨 아래에 놓인다
+
+
 @dataclass
 class Field:
     key: str
@@ -35,3 +38,6 @@ class Tool:
     # (STATUS_READY_TEXT, STATUS_RUNNING_TEXT, STATUS_ERROR_PREFIX, STATUS_CANCELLING_TEXT,
     #  STATUS_DONE_TEXT, STATUS_CANCELLED_TEXT, STATUS_TEXT_MAX_LEN, CONTROLS_*)
     texts: dict = field(default_factory=dict)
+    # 홈의 카테고리 이름. 새 카테고리 = 여기에 새 이름을 쓰기만 하면 된다 (별도 등록 없음).
+    # 예: "Converter" / "Editor" / "Downloader" / "Etc". 대소문자·앞뒤 공백은 무시하고 같은 그룹으로 묶는다.
+    category: str = CATEGORY_ETC

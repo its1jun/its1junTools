@@ -55,9 +55,9 @@ class LogScreen(Screen[None]):
         first = min(self._offset + 1, total)
         last = min(self._offset + VISIBLE_ROWS, total)
         return (
-            f"Controls: [{action_label(ACTION_UP, ACTION_DOWN)}/Wheel] Scroll "
+            f"[{action_label(ACTION_UP, ACTION_DOWN)}/Wheel] Scroll "
             f"({first}-{last}/{total}) | [{key_label(close_keys)}] Close\n"
-            f"          [{action_label(ACTION_SAVE_LOG)}] Save Log | "
+            f"[{action_label(ACTION_SAVE_LOG)}] Save Log | "
             f"[{action_label(ACTION_OPEN_OUTPUT_DIR)}] Open Log Dir"
         )
 

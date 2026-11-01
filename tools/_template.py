@@ -21,6 +21,7 @@ tool = Tool(
     id="template",
     name="Template",                  # 홈 목록의 이름 줄 / 도구 창 제목
     description="Copy this file",     # 홈 목록의 설명 줄 (비우면 표시 안 함)
+    category="Etc",                   # 홈의 카테고리: Converter / Editor / Downloader / Etc (새 이름을 쓰면 새 카테고리)
     fields=[
         Field("input_file", "file", "1. Input File:", placeholder="press Enter to browse"),
         # Field("input_files", "file", "1. Input Files:", multi=True),   # 여러 개 선택: 값 = 경로 리스트

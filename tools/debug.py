@@ -76,6 +76,7 @@ tool = Tool(
         ],
     ],
     run=run,
-    output_dir_name="Output",       # 모든 도구가 공유하는 폴더 (ARCHITECTURE.md 참고),
+    category="Etc",                 # 홈의 카테고리 (Converter / Editor / Downloader / Etc)
+    output_dir_name="Output",       # 모든 도구가 공유하는 폴더 (AGENT.md 참고),
     texts={"STATUS_READY_TEXT": "Ready (debug)"},
 )
